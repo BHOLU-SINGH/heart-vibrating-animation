@@ -1,0 +1,61 @@
+/* 
+Author Name	: Bholu Singh
+Website		: Free Projects1 
+File Name 	: style.css
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #262626;
+}
+.heart{
+    width: 100px;
+    height: 100px;
+    background: red;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 120px red;
+    animation: animate 1s ease-in-out infinite;
+}
+.heart:hover{
+    animation-play-state: paused;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(-45deg) scale(1);
+    }
+    50%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1);
+    }
+}
+.heart::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: -10px 10px 120 red;
+}
+.heart::after{
+    content: '';
+    position: absolute;
+    right: -50%;
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: -10px 10px 120 red;
+}
